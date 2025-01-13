@@ -460,7 +460,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/AyuGram/AyuGramDesktop.git
-        commit: f73edfec943dd28f1bf082f08b8125116eceae2e
+        commit: 87da02ac1586f080bbb37b9b098b736fa7568dc1
         tag: v5.8.3
         x-checker-data:
           type: json
