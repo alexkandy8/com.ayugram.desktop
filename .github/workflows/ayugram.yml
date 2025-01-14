@@ -10,7 +10,8 @@ jobs:
       image: bilelmoussaoui/flatpak-github-actions:freedesktop-23.08
       options: --privileged
     steps:
-      - uses: jlumbroso/free-disk-space@v1.3.1
+      - name: Free space
+        uses: jlumbroso/free-disk-space@v1.3.1
         with:
           # this might remove tools that are actually needed,
           # if set to "true" but frees about 6 GB
@@ -24,7 +25,6 @@ jobs:
           large-packages: true
           docker-images: true
           swap-storage: true
-
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
