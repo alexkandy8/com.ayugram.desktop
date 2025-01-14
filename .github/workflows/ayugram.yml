@@ -22,9 +22,9 @@ jobs:
           android: false
           dotnet: false
           haskell: false
-          large-packages: true
+          large-packages: false
           docker-images: true
-          swap-storage: true
+          swap-storage: false
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
