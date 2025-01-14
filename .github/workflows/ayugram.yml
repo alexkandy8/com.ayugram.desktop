@@ -10,6 +10,9 @@ jobs:
       image: bilelmoussaoui/flatpak-github-actions:freedesktop-23.08
       options: --privileged
     steps:
+      - name: Free Disk Space
+        uses: ShubhamTatvamasi/free-disk-space-action@master
+      
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
