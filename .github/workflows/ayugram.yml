@@ -3,16 +3,21 @@ on:
   workflow_dispatch:
 name: CI
 jobs:
+  free-space:
+    name: 'Free Disk Space'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free Disk Space
+        uses: ShubhamTatvamasi/free-disk-space-action@master
+
   flatpak:
     name: 'Flatpak'
+    needs: free-space
     runs-on: ubuntu-latest
     container:
       image: bilelmoussaoui/flatpak-github-actions:freedesktop-23.08
       options: --privileged
     steps:
-      - name: Free Disk Space
-        uses: ShubhamTatvamasi/free-disk-space-action@master
-      
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
